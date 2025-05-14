@@ -2,6 +2,11 @@
 /* Desktop 1250~1920 */
 /* Tablet 1249~850 */
 @media screen and (max-width:1249px) {
+    #wrap .intro {
+        padding: 0 80px;}
+    #wrap .intro .container {
+        width: 100%;
+    }
     #wrap .intro .container h1:nth-child(2) {
         font-size: 3.125rem;
     }
@@ -13,6 +18,8 @@
 }
 /* mobile 849~320 */
 @media screen and (max-width:849px) {
+    #wrap .intro {
+        padding: 0 15px;}
     #wrap .intro .container h1:nth-child(2) {
         font-size: 1.875rem;
     }
