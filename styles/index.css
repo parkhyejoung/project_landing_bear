@@ -1,3 +1,5 @@
+/* 반응형 CSS 속성 변경 시 애니메이션 적용 속성 */
+body * {transition: all 0.5s;} /* 반응형 크기 조절 시 부드러운 모션 */
 /* 1행=====================================북극곰 후원 안내 */
 #wrap {} /* 기본값 유지를 위해 작성하지않음 너비는 부모의 100% 높이는 자식만큼 */
 #wrap .intro {
@@ -68,7 +70,8 @@
     background:url(../images/quiz_bg.png) center / cover; /* 배경이미지 꽉 채울때 center / cover 단골로 쓰기 */
 }
 #wrap .quiz .container {
-    width: 1250px; 
+    max-width: 1250px; 
+    min-width: 320px;
     margin: 0 auto;
     border: 1px solid aqua;
     display: grid; /* 왼쪽 퀴즈, 오른쪽 참여현황 정렬 grid */
@@ -114,20 +117,59 @@
 #wrap .quiz .container #left_quiz #answer_btn {
     background: #050505;
     width: 100%;
-    height: 54px; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    height: 54px; 
     border-radius: 50px;
 }
 #wrap .quiz .container .right {
     text-align: right;
     padding-top: 69px;
 }
-#wrap .quiz .container .right p:nth-child(1) {}
-#wrap .quiz .container .right p:nth-child(1) img {}
+#wrap .quiz .container .right p:nth-child(1) {
+    text-align: center; /* 인라인태그라서 이렇게 정렬 */
+}
+#wrap .quiz .container .right p:nth-child(1) img {
+    width: 90%;
+}
 #wrap .quiz .container .right p:nth-child(2) {
     color: #fff;
     margin-top: 20px;
+    text-align: center; 
 }
 /* 3행=====================================새끼북극곰 이야기 */
+    #wrap .ad {
+        text-align: center;
+        background: url(../images/video_bg.png) right / cover;
+        padding: 200px 0;
+    }
+    #wrap .ad .container {
+        max-width: 1250px; 
+        min-width: 320px;
+        height: 943px;
+        margin: 0 auto;
+        }
+    #wrap .ad .container h1 {
+        font-size: 3.125rem;
+        font-weight: 500;
+        margin-bottom: 70px;
+    }
+    #wrap .ad .container iframe { /* 소스코드 붙여올때 있는 기본값은 지워도 무관 */
+        margin-bottom: 70px;
+        width: 100%; /* 아이프레임 영상은 한번 더 설정하면 된다 */
+        max-width: 900px;
+        height: 600px;
+    }
+    #wrap .ad .container a {
+        display:block;
+        width: 409px;
+        height: 71px;
+        background: linear-gradient(90deg,#FE9300,#FF7300);
+        border-radius: 50px;
+        line-height: 71px;
+        color: #fff;
+        font-size: 2.125rem;
+        margin: 0 auto;
+    }
+
 /* 4행=====================================빙하면적감소 */
 /* 5행=====================================인류재앙 */
 /* 6행=====================================지구위기 */
