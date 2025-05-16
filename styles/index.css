@@ -171,7 +171,99 @@ body * {transition: all 0.5s;} /* 반응형 크기 조절 시 부드러운 모�
     }
 
 /* 4행=====================================빙하면적감소 */
+#wrap .reduction {
+    background-image: url(../images/50_bg.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#wrap .reduction .container {
+    border: 1px solid aqua;
+    width: 1250px;
+    margin:0 auto;
+}
+#wrap .reduction .container h2 {}
+#wrap .reduction .container h2 em {}
+#wrap .reduction .container p {}
+#wrap .reduction .container p img {
+}
 /* 5행=====================================인류재앙 */
+#wrap .disaster {
+    background:#F5F5F5;
+    padding:200px 0; /* margin 0 auto로 가운데로 옮길꺼니까 좌우값은 XXX */
+}
+#wrap .disaster .container {   
+    border: 1px solid red;
+    max-width: 1250px; min-width:320px;
+    /* 최소 320 ~ 최대 1250 사이 너비값은 가변형 세팅 */
+    /* (위) 큰 범위값 세팅 후 @media 규칙 내에서 태블릿 , 모바일에 맞는 레이아웃 재수정하며 반응형 제작 */
+    margin:0 auto;
+}
+#wrap .disaster .container h2 {
+    font-size: 3.438rem;
+}
+#wrap .disaster .container > p {
+    font-size: 1.25rem;
+    margin: 55px 0;
+}
+#wrap .disaster .container .list {
+    display: flex; 
+    gap:20px; /* 사이 여백 */
+    /* 옆으로 배열하려고 */
+}
+#wrap .disaster .container .list li {
+    background: #fff;
+    flex: 1;
+}
+#wrap .disaster .container .list li .bg {
+    height: 320px;
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+    text-align: center;
+}
+#wrap .disaster .container .list li .bg::before {  
+    content:'';
+    display: block;
+    position: absolute; /* (위)content~height 속성까지 before 또는 after 가상요소 사용 시 필수속성 모음*/
+    left: 0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(#000 10%, transparent 60%);
+    z-index: 50;
+}
+#wrap .disaster .container .list li .bg h3 {
+    color: #fff; 
+    position: relative; /* 현재 위치에서 작성해야해서 relative */
+    z-index: 60; /* z-index 속성은 position 속성이 선행되어야만 사용할수있는 중첩순서이다. */
+    font-size: 2.688rem;
+    font-weight: 500;
+    padding-top: 48px;
+    margin-bottom: 11px;
+}
+#wrap .disaster .container .list li .bg p {
+    color: #fff; 
+    position: relative;
+    z-index: 60;
+    font-size: 1.25rem;
+}
+#wrap .disaster .container .list li > p {
+    height: 250px;
+    font-size: 1.25rem;
+    padding:20px 20px;
+    line-height: 1.7;
+}
+/* 5행 개별 배경 선택자 */
+#wrap .disaster .container .list li:nth-of-type(1) .bg {
+    background-image: url(../images/28.png);
+} /* 수열선택은 형제한테 줘야함 고로 div bg XXX (접었을때 태그 뭐가 많이 보임 그건형제 아님 주의)*/
+#wrap .disaster .container .list li:nth-of-type(2) .bg {
+    background-image: url(../images/27.png);
+}
+#wrap .disaster .container .list li:nth-of-type(3) .bg {
+    background-image: url(../images/wwf.jpg);
+}
 /* 6행=====================================지구위기 */
 /* 7행=====================================WWF단체홍보 */
 /* 8행=====================================다양한활동 */

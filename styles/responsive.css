@@ -22,6 +22,19 @@
     }
     /* ====================3행 video */
     #wrap .ad {padding: 200px 80px;} 
+    /* --------------------------5행 인류재앙 */
+    #wrap .disaster {padding: 200px 80px;}
+    #wrap .disaster .container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    #wrap .disaster .container > p {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    #wrap .disaster .container .list li .bg p {
+        font-size: 1rem;
+    }
 }
 /* mobile 849~320 */
 @media screen and (max-width:849px) {
@@ -42,6 +55,36 @@
         grid-template-columns: 1fr;
     }
     /*3행*/
-    #wrap .ad .container iframe {height: 400px;} 
     #wrap .ad {padding: 50px 15px;} /* <<이렇게 맞추면서 영상크기 기기에 맞게 조절가능 */
+    #wrap .ad .container iframe {height: 400px;} 
+    /* 5행 */
+    #wrap .disaster {padding: 70px 15px;}
+    #wrap .disaster .container .list {
+        display: flex;
+        flex-flow: column nowrap;
+        /* 옆으로 정렬하는 대상(li)의 부모(flex) */
+        /* flex 의 자식요소들을 옆으로 정렬(기본값) */}
+    #wrap .disaster .container .list li > p {
+        height: max-content; /* 간편하게 내용에 맞게 높이 조정이 가능 */
+    }
+    #wrap .disaster .container .list li .bg {
+        height: 150px;
+        text-align: center;
+    }
+    #wrap .disaster .container .list li .bg h3 {
+        font-size:1.375rem;
+    }
+    #wrap .disaster .container .list li > p {
+        font-size: 0.813rem;
+    }
+    #wrap .disaster .container h2 {
+        font-size: 1.375rem;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    #wrap .disaster .container > p {
+        font-size: 0.813rem;
+        margin-bottom: 40px;
+        text-align: center;
+    }
 }
